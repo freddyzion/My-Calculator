@@ -1,0 +1,66 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    height: 40vh;
+    background: #eee;
+    display: grid;
+    place-items: center;
+}
+
+.input {
+    height: 30%;
+    width: 95%;
+    font-size: 4rem;
+    text-align: end;
+    font-weight: 300;
+    overflow: auto;
+    animation: cursor 350ms linear infinite alternate;
+}
+
+@keyframes cursor {
+    from {border-right: 2px solid black;}
+    to {border-right: 2px solid #aaaa;}
+}
+
+button {
+    border: none;
+    background: none;
+    font-size: 1.85rem;
+    &:focus {
+        color: #333a;
+    }
+}
+
+.calcBtns {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2em;
+    margin-top: 2em;
+}
+
+#equals {
+    color: white;
+    background: #006cff;
+    grid-row: span 2;
+    font-size: 4rem;
+    padding: .5em .185em;
+    margin: auto;
+    border-radius: 4vw;
+    font-weight: 250;
+}
+
+.blueBtns {
+    color: #006cff;
+}
